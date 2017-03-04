@@ -14,15 +14,15 @@
     <title><jsp:invoke fragment="title"/></title>
 
     <!-- Bootstrap Core CSS -->
-    <spring:url value="resources/css/bootstrap.min.css" var="bootstrap_min"/>
+    <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap_min"/>
     <link href="${bootstrap_min}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <spring:url value="resources/css/modern-business.css" var="custom_css"/>
+    <spring:url value="/resources/css/modern-business.css" var="custom_css"/>
     <link href="${custom_css}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <spring:url value="resources/font-awesome/css/font-awesome.min.css" var="custom_font_css"/>
+    <spring:url value="/resources/font-awesome/css/font-awesome.min.css" var="custom_font_css"/>
     <link href="${custom_font_css}" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,11 +32,11 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- jQuery -->
-    <spring:url value="resources/js/jquery.js" var="jquery"/>
+    <spring:url value="/resources/js/jquery.js" var="jquery"/>
     <script src="${jquery}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <spring:url value="resources/js/bootstrap.min.js" var="js"/>
+    <spring:url value="/resources/js/bootstrap.min.js" var="js"/>
     <script src="${js}"></script>
 
 </head>
@@ -78,7 +78,8 @@
                             <a href="${file}">Загрузка</a>
                         </li>
                         <li>
-                            <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                            <c:url value="/jdbc.html" var="jdbc"/>
+                            <a href="${jdbc}">JDBC</a>
                         </li>
                         <li>
                             <a href="portfolio-3-col.html">3 Column Portfolio</a>
